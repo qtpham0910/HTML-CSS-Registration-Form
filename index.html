@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>freeCodeCamp Registration Form Project</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+    <title>freeCodeCamp but edited alot</title>
 	  <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information</p>
+    <p>It's quick and easy</p>
     <form>
       <fieldset>
-        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
-        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
-        <label>Enter Your Email: <input type="email" name="email" required /></label>
-        <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+        <label>Name <input type="text" name="name" required /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <label>Password<input type="password" class="password" id="password"  pattern="[a-z0-5]{8,}" aria-label="pwd" onkeyup='check()'  required /></label>    
+        <label>Date of birth 
+          <input type="date" name="dateOfBirth" required/></label>
+        Gender
+      <div class="group">
+        <span class="gend">
+          <label class="sx" for="sex1">Male</label>
+          <input type="radio" name="sex" value="1" id="sex1"/>
+        </span>
+        <span class="gend">
+          <label class="sx" for="sex2">Female</label>
+          <input type="radio" name="sex" value="2" id="sex2"/>
+        </span>
+        <span class="gend">
+           <label class="sx" for="sex3">Other</label>
+          <input type="radio" name="sex" value="-1" id="sex3" />
+        </span>
+      </div>
       </fieldset>
       <fieldset>
+				<label>Type of account</label>
         <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
         <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
-        <label>
-          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-			  </label>
+       
       </fieldset>
       <fieldset>
-        <label>Upload a profile picture: <input type="file" name="file" /></label>
-        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
-			  </label>
         <label>How did you hear about us?
-          <select name="referrer">
+          <select type="referrer" class="referrer">
             <option value="">(select one)</option>
-            <option value="1">freeCodeCamp News</option>
-            <option value="2">freeCodeCamp YouTube Channel</option>
-            <option value="3">freeCodeCamp Forum</option>
-            <option value="4">Other</option>
+            <option value="1">Facebook</option>
+            <option value="2">Youtube</option>
+            <option value="3">Twitter</option>
+            <option value="4">Instagram</option>
+            <option value="5">Other</option>
           </select>
         </label>
-        <label>Provide a bio:
+        <label>Something about you:
           <textarea name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
 			  </label>
+				 <label>
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://google.com/">terms and conditions</a>
+			  </label>
       </fieldset>
-      <input type="submit" value="Submit" />
+      <button type="submit" class="button"> Sign Up </button>
     </form>
   </body>
 </html>
